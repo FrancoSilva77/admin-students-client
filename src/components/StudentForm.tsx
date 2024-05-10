@@ -1,4 +1,5 @@
 import { useForm } from 'react-hook-form';
+import Error from './ui/Error';
 import { DraftStudent } from '../types';
 
 export default function StudentForm() {
@@ -42,7 +43,7 @@ export default function StudentForm() {
               required: 'El nombre es obligatorio',
             })}
           />
-          {errors.name && <p>{errors.name?.message}</p>}
+          {errors.name && <Error>{errors.name?.message}</Error>}
         </div>
 
         <div className="mb-5">
@@ -61,7 +62,7 @@ export default function StudentForm() {
               required: 'El Apellido es obligatorio',
             })}
           />
-          {errors.lastname && <p>{errors.lastname?.message}</p>}
+          {errors.lastname && <Error>{errors.lastname?.message}</Error>}
         </div>
 
         <div className="mb-5">
@@ -80,7 +81,7 @@ export default function StudentForm() {
               required: 'La edad es requerida',
             })}
           />
-          {errors.age && <p>{errors.age?.message}</p>}
+          {errors.age && <Error>{errors.age?.message}</Error>}
         </div>
 
         <div className="mb-5">
@@ -103,7 +104,7 @@ export default function StudentForm() {
             })}
             className="w-full p-3  border border-gray-100 accent-orange-600"
           />
-          {errors.email && <p>{errors.email?.message}</p>}
+          {errors.email && <Error>{errors.email?.message}</Error>}
         </div>
 
         <div className="mb-5">
@@ -121,7 +122,7 @@ export default function StudentForm() {
             })}
             className="w-full p-3  border border-gray-100 accent-orange-600"
           />
-          {errors.average && <p>{errors.average?.message}</p>}
+          {errors.average && <Error>{errors.average?.message}</Error>}
         </div>
 
         {/* <div className="mb-5">
@@ -141,7 +142,7 @@ export default function StudentForm() {
             })}
             className="w-full p-3  border border-gray-100 accent-orange-600"
           />
-          {errors.image && <p>{errors.image?.message}</p>}
+          {errors.image && <Error>{errors.image?.message}</Error>}
         </div> */}
 
         <input
